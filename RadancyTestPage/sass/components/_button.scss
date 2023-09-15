@@ -1,0 +1,17 @@
+.btn {
+  display: inline-block;
+  border: none;
+  font-size: 1.6em;
+  color: $color-white;
+  background-color: $color-orage;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+}

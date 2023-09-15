@@ -1,0 +1,23 @@
+.footer {
+  border-top: 1px solid $color-primary;
+  padding: 3em;
+
+  &-eeo {
+    color: $light-grey;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    a {
+      color: $light-grey;
+      text-decoration: underline;
+    }
+  }
+
+  &-links {
+    font-weight: bold;
+
+    a {
+      color: black;
+    }
+  }
+}

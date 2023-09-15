@@ -1,0 +1,349 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+}
+a:hover,
+a a:active {
+  text-decoration: none;
+}
+
+.body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.heading-primary {
+  color: #00945f;
+  font-size: 2.4rem;
+  font-weight: 200;
+  margin-bottom: 1.5em;
+}
+.heading-primary::after {
+  content: "";
+  display: block;
+  width: 60px;
+  border-bottom: 1.5px solid #00945f;
+  padding-bottom: 0.5em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.heading-secondary {
+  color: #00945f;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  color: rgb(141, 140, 140);
+  line-height: 1.5em;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-top-small {
+  margin-top: 1.5rem;
+}
+
+.u-margin-top-medium {
+  margin-top: 3rem;
+}
+
+.header {
+  margin-bottom: 4em;
+}
+.header-hero {
+  width: 100%;
+}
+.header-hero-box {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+.header-hero-box img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.header-hero-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 120, 103, 0.92);
+  -webkit-clip-path: polygon(57% 0%, 100% 0%, 100% 100%, 50% 100%);
+          clip-path: polygon(57% 0%, 100% 0%, 100% 100%, 50% 100%);
+}
+
+@media (max-width: 768px) {
+  .header-hero-box {
+    max-width: none;
+    overflow: hidden;
+  }
+  .header-hero-box img {
+    max-width: none;
+    width: 768px;
+  }
+  .header-hero-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 768px;
+    height: 300px;
+    background-color: rgba(47, 120, 103, 0.92);
+    -webkit-clip-path: polygon(57% 0%, 100% 0%, 100% 100%, 50% 100%);
+            clip-path: polygon(57% 0%, 100% 0%, 100% 100%, 50% 100%);
+  }
+}
+@media (max-width: 480px) {
+  .header-hero-mask {
+    width: 0%;
+    height: 0%;
+  }
+}
+@media (max-width: 400px) {
+  .header-hero-box img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: -20px 0%;
+       object-position: -20px 0%;
+  }
+}
+@media (max-width: 350px) {
+  .header-hero-box img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: -40px 0%;
+       object-position: -40px 0%;
+  }
+}
+.nav {
+  margin-top: 4em;
+  margin-bottom: 4em;
+  margin-left: 2em;
+}
+.nav-logo {
+  width: 26%;
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    width: 40%;
+  }
+}
+@media (max-width: 480px) {
+  .nav {
+    text-align: center;
+  }
+  .nav-logo {
+    width: 60%;
+  }
+}
+.main {
+  margin-left: 3em;
+  margin-right: 3em;
+  padding-bottom: 8em;
+}
+
+.footer {
+  border-top: 1px solid #00945f;
+  padding: 3em;
+}
+.footer-eeo {
+  color: rgb(141, 140, 140);
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.footer-eeo a {
+  color: rgb(141, 140, 140);
+  text-decoration: underline;
+}
+.footer-links {
+  font-weight: bold;
+}
+.footer-links a {
+  color: black;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  font-size: 1.6em;
+  color: #fff;
+  background-color: #e97300;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.section {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.section-advantage {
+  display: flex;
+  flex-direction: column;
+}
+.section-advantage-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+}
+.section-advantage-row:not(:last-child) {
+  border-right: 1px rgb(141, 140, 140);
+  margin-bottom: 6em;
+}
+.section-advantage-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.section-advantage-text a {
+  font-size: 1.6rem;
+  color: #759b24;
+}
+.section-advantage-text:not(:first-child) {
+  padding-left: 3em;
+}
+.section-advantage-text:not(:last-child) {
+  border-right: 1px solid;
+  border-color: rgb(141, 140, 140);
+  padding-right: 2em;
+}
+.section-informational {
+  background-color: #ebf7f5;
+  line-height: 2.5em;
+}
+.section-informational h2 {
+  background-color: #00945f;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  color: #ebf7f5;
+}
+.section-informational p {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  padding-right: 3em;
+  padding-left: 3em;
+  line-height: 1.8em;
+}
+.section-qoutes {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.section-qoutes-single {
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+}
+.section .qoute {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+}
+.section .qoute:not(:first-child):not(:last-child) {
+  max-width: 300px;
+}
+.section .qoute-portrait {
+  width: 150px;
+}
+.section .qoute-text {
+  color: rgb(141, 140, 140);
+  font-style: italic;
+  line-height: 1.6em;
+  max-width: 90%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1.2rem;
+}
+.section .qoute-text-box {
+  background-image: url("../img/qoutationMarks.png");
+  background-repeat: no-repeat;
+}
+.section .qoute-text--wide {
+  max-width: 100%;
+}
+.section .qoute-image {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.section .qoute-name {
+  color: #00945f;
+  font-size: 1.2rem;
+  max-width: 10em;
+}
+
+@media (max-width: 768px) {
+  .section-qoutes {
+    flex-direction: column;
+    align-items: center;
+  }
+  .qoute {
+    margin-bottom: 2.5em;
+  }
+  .section-advantage-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-advantage-row:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .section-advantage-text {
+    width: 100%;
+  }
+  .section-advantage-text:not(:first-child) {
+    padding-left: 0;
+  }
+  .section-advantage-text:not(:last-child) {
+    border-right: none;
+    padding-right: 0;
+  }
+  .section-advantage div:not(:last-child) {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,160 @@
+.section {
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  &-advantage {
+    display: flex;
+    flex-direction: column;
+
+    &-row {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 2em;
+
+      &:not(:last-child) {
+        border-right: 1px $light-grey;
+        margin-bottom: 6em;
+      }
+    }
+
+    &-text {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        font-size: $default-font-size;
+        color: $color-green-yellow;
+      }
+
+      &:not(:first-child) {
+        padding-left: 3em;
+      }
+
+      &:not(:last-child) {
+        border-right: 1px solid;
+        border-color: $light-grey;
+        padding-right: 2em;
+      }
+    }
+  }
+
+  &-informational {
+    background-color: $color-light-blue;
+    line-height: 2.5em;
+
+    h2 {
+      background-color: $color-primary;
+      padding-top: 0.8em;
+      padding-bottom: 0.8em;
+      color: $color-light-blue;
+    }
+
+    p {
+      padding-top: 1.2em;
+      padding-bottom: 1.2em;
+      padding-right: 3em;
+      padding-left: 3em;
+      line-height: 1.8em;
+    }
+  }
+
+  &-qoutes {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    &-single {
+      display: flex;
+      flex-direction: column;
+      max-width: 150px;
+    }
+  }
+
+  .qoute {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 150px;
+
+    &:not(:first-child):not(:last-child) {
+      max-width: 300px;
+    }
+
+    &-portrait {
+      width: 150px;
+    }
+
+    &-text {
+      color: $light-grey;
+      font-style: italic;
+      line-height: 1.6em;
+      max-width: 90%;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      font-size: $small-font-size;
+
+      &-box {
+        background-image: url('../img/qoutationMarks.png');
+        background-repeat: no-repeat;
+      }
+
+      &--wide {
+        max-width: 100%;
+      }
+    }
+
+    &-image {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    &-name {
+      color: $color-primary;
+      font-size: $small-font-size;
+      max-width: 10em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-qoutes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qoute {
+    margin-bottom: 2.5em;
+  }
+
+  .section-advantage {
+    &-row {
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-text {
+      width: 100%;
+
+      &:not(:first-child) {
+        padding-left: 0;
+      }
+      &:not(:last-child) {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+
+    div:not(:last-child) {
+      border-bottom: 1px solid lightgray;
+      padding-bottom: 2em;
+      margin-bottom: 2em;
+    }
+  }
+}
